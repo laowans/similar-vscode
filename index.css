@@ -4,10 +4,12 @@
 
 /* 颜色 */
 :root {
-	--bg-color: #2e3033; /* 主界面背景色 */
+	--bg-color: #262627; /* 主界面背景色 */
 	--side-bar-bg-color: #292a2d; /* 左侧边栏背景色 */
 	--text-color: #bbc2c9; /* 默认文字颜色 */
 	--text-strong-color: #d4d4d4; /* 文字加粗时颜色 */
+	--text-selection-color: #fcfbfd; /* 文字选中颜色 */
+	--text-selection-bg-color: rgba(41, 97, 153, 60%); /* 文字选中背景色 */
 	--title-color: #ccc; /* 标题颜色 */
 	--list-li-marker-color: #569cd6; /* 列表前缀颜色 */
 
@@ -265,16 +267,17 @@ audio:not([controls]) {
 	display: none;
 }
 
+/* 文字选中样式 */
+::-webkit-selection,
 ::-moz-selection {
-	background: #4a89dc;
-	color: #fff;
+	background: var(--text-selection-bg-color);
+	color: var(--text-selection-color);
 	text-shadow: none;
 }
-
 *.in-text-selection,
 ::selection {
-	background: #4a89dc;
-	color: #fff;
+	background: var(--text-selection-bg-color);
+	color: var(--text-selection-color);
 	text-shadow: none;
 }
 
